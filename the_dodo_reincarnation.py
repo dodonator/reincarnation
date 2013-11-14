@@ -148,6 +148,9 @@ class dodo(turtle.Turtle):
 	def show(self,name='default'):
 		self.army[name].st()
 
+	def get_Speed(self,name='default'):
+		return self.army[name].speed()
+
 	def set_Speed(self,value,name='default'):
 		self.speed = value
 		self.army[name].speed(self.speed)
@@ -157,9 +160,6 @@ class dodo(turtle.Turtle):
 
 	def setPosition(self,x,y,name='default'):
 		self.army[name].goto(x,y)
-
-	def get_Speed(self,name='default'):
-		return self.army[name].speed()
 
 	def get_xPos(self,name='default'):
 		return self.army[name].xcor()
@@ -173,7 +173,7 @@ class dodo(turtle.Turtle):
 	def set_yPos(self,position,name='default'):
 		self.army[name].sety(position)
 
-	def goHomeTurtleYouAreDrunk(self,name='default'):
+	def goHomeDodoYouAreDrunk(self,name='default'):
 		self.army[name].home()
 
 	def wait(self):
@@ -199,5 +199,5 @@ class dodo(turtle.Turtle):
 		return len(self.army)
 
 turtle = dodo()
-# Action!
+# Place to command the dodo
 turtle.wait()
